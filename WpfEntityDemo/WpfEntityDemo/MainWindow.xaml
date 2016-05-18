@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="btnHae" Content="Hae" HorizontalAlignment="Left" Margin="44,37,0,0" VerticalAlignment="Top" Width="75" Click="btnHae_Click"/>
+        <Button x:Name="btnHae" Content="Hae SQL" HorizontalAlignment="Left" Margin="44,37,0,0" VerticalAlignment="Top" Width="417" Click="btnHae_Click" Height="71"/>
+        <Button x:Name="btnHaeLista" Content="Hae Lista" HorizontalAlignment="Left" Margin="44,148,0,0" VerticalAlignment="Top" Width="417" Height="70" Click="btnHaeLista_Click"/>
 
     </Grid>
 </Window>

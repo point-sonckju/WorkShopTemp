@@ -31,15 +31,28 @@ namespace WpfEntityDemo
             var finnishCustomers = from c in entities.Customers
                                    where c.Country == "Finland"
                                    select c;
-            //var data new CustRow { sarake1 = "sarake1", sarake2 = "sarake2", sarake3 = "sarake3" };
+
             foreach (var cust in finnishCustomers)
             {
                 MessageBox.Show(cust.CompanyName + " " + cust.ContactName + " " + cust.Address);
-                //dgCustomers.Items.Add(data);
-                //dgCustomers.Items.Add(new { sarake1 = "sarake1", sarake2 = "sarake2", sarake3 = "sarake3" });
+
             }
 
 
+        }
+
+        private void btnHaeLista_Click(object sender, RoutedEventArgs e)
+        {
+            int[] numerot = { 3,6,1,8,9,12,66,44};
+
+            var suuretnumerot = from n in numerot
+                              where n > 10
+                              orderby n
+                              select n;
+            foreach (var numero in suuretnumerot)
+            {
+                MessageBox.Show(numero.ToString());
+            }
         }
     }
 }
