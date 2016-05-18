@@ -28,13 +28,13 @@ namespace WpfEntityDemo
         private void btnHae_Click(object sender, RoutedEventArgs e)
         {
             northwindEntities entities = new northwindEntities();
-            var finnishCustomers = from c in entities.Customers
-                                   where c.Country == "Finland"
-                                   select c;
+            var finnishCustomers = from fff in entities.Customers
+                                   where fff.Country == "Finland"
+                                   select fff;
 
             foreach (var cust in finnishCustomers)
             {
-                MessageBox.Show(cust.CompanyName + " " + cust.ContactName + " " + cust.Address);
+                MessageBox.Show(cust.CompanyName + " " + cust.ContactName + " " + cust.Address + " " + cust.Country );
 
             }
 
@@ -43,15 +43,17 @@ namespace WpfEntityDemo
 
         private void btnHaeLista_Click(object sender, RoutedEventArgs e)
         {
-            int[] numerot = { 3,6,1,8,9,12,66,44};
+            string[] numerot = { "3","6", "100","1","8","9","12","66","44"};
 
             var suuretnumerot = from n in numerot
-                              where n > 10
                               orderby n
                               select n;
-            foreach (var numero in suuretnumerot)
+            int laskuri = 0;
+            foreach (var pöllö in suuretnumerot)
             {
-                MessageBox.Show(numero.ToString());
+                MessageBox.Show(pöllö.ToString());
+               // laskuri = laskuri + int.Parse(numero);
+               // MessageBox.Show(laskuri.ToString());
             }
         }
     }
