@@ -1,13 +1,13 @@
-﻿<Window x:Class="DemoWS20160504.MainWindow"
+﻿<Window x:Class="EntityDemoJSO1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DemoWS20160504"
+        xmlns:local="clr-namespace:EntityDemoJSO1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid Margin="0,0,2,0">
-        <Button x:Name="btnLuoAutot" Content="Luo autot" HorizontalAlignment="Left" Height="37" Margin="24,41,0,0" VerticalAlignment="Top" Width="135" Click="btnLuoAutot_Click"/>
+    <Grid>
+        <Button x:Name="btnTietokantaTemppu" Content="Tee" HorizontalAlignment="Left" Margin="43,50,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="0.277,0.839" Height="41"/>
 
     </Grid>
 </Window>
