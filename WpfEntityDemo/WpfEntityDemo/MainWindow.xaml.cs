@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EntityDemoJSO1
+namespace WpfEntityDemo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,7 +25,7 @@ namespace EntityDemoJSO1
             InitializeComponent();
         }
 
-        private void btnTietokantaTemppu_Click(object sender, RoutedEventArgs e)
+        private void btnHae_Click(object sender, RoutedEventArgs e)
         {
             northwindEntities entities = new northwindEntities();
             var finnishCustomers = from c in entities.Customers
@@ -38,17 +38,8 @@ namespace EntityDemoJSO1
                 //dgCustomers.Items.Add(data);
                 //dgCustomers.Items.Add(new { sarake1 = "sarake1", sarake2 = "sarake2", sarake3 = "sarake3" });
             }
-          
+
+
         }
-
-
     }
-    /*
-    public class CustRow
-    {
-        public string sarake1 { get; set; }
-        public string sarake2 { get; set; }
-        public string sarake3 { get; set; }
-    }
-    */
 }

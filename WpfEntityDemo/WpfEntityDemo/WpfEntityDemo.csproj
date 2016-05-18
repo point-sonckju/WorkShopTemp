@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64A64A75-F6EA-4A61-ABD6-5D4F80732E9A}</ProjectGuid>
+    <ProjectGuid>{CA796D73-BCAD-4E1E-8515-BF040E3D7696}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EntityDemoJSO1</RootNamespace>
-    <AssemblyName>EntityDemoJSO1</AssemblyName>
+    <RootNamespace>WpfEntityDemo</RootNamespace>
+    <AssemblyName>WpfEntityDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -66,15 +66,55 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="northwindDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>northwindDataSet.xsd</DependentUpon>
+    <Compile Include="Categories.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindMalli.cs">
+    <Compile Include="Contacts.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDemographics.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="employees_bak.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="northwindEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindMalli.tt</DependentUpon>
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="order_bak.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Details.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shippers.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Territories.cs">
+      <DependentUpon>northwindEntities.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -90,15 +130,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NorthwindMalli.Context.cs">
+    <Compile Include="northwindEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindMalli.Context.tt</DependentUpon>
+      <DependentUpon>northwindEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindMalli.Designer.cs">
+    <Compile Include="northwindEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindMalli.edmx</DependentUpon>
+      <DependentUpon>northwindEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -117,23 +157,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="NorthwindMalli.edmx">
+    <EntityDeploy Include="northwindEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NorthwindMalli.Designer.cs</LastGenOutput>
+      <LastGenOutput>northwindEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="northwindDataSet.xsc">
-      <DependentUpon>northwindDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="northwindDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>northwindDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="northwindDataSet.xss">
-      <DependentUpon>northwindDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="NorthwindMalli.edmx.diagram">
-      <DependentUpon>NorthwindMalli.edmx</DependentUpon>
+    <None Include="northwindEntities.edmx.diagram">
+      <DependentUpon>northwindEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -146,15 +175,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NorthwindMalli.Context.tt">
+    <Content Include="northwindEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthwindMalli.edmx</DependentUpon>
-      <LastGenOutput>NorthwindMalli.Context.cs</LastGenOutput>
+      <DependentUpon>northwindEntities.edmx</DependentUpon>
+      <LastGenOutput>northwindEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="NorthwindMalli.tt">
+    <Content Include="northwindEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NorthwindMalli.edmx</DependentUpon>
-      <LastGenOutput>NorthwindMalli.cs</LastGenOutput>
+      <DependentUpon>northwindEntities.edmx</DependentUpon>
+      <LastGenOutput>northwindEntities.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

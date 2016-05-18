@@ -5,9 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EntityDemoJSO1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button x:Name="btnTietokantaTemppu" Content="Tee" HorizontalAlignment="Left" Margin="43,50,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="0.277,0.839" Height="41"/>
 
-    </Grid>
+
+
 </Window>

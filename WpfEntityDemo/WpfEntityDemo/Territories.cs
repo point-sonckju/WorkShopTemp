@@ -7,24 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EntityDemoJSO1
+namespace WpfEntityDemo
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Shippers
+    public partial class Territories
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Shippers()
+        public Territories()
         {
-            this.Orders = new HashSet<Orders>();
+            this.Employees = new HashSet<Employees>();
         }
     
-        public int ShipperID { get; set; }
-        public string CompanyName { get; set; }
-        public string Phone { get; set; }
+        public string TerritoryID { get; set; }
+        public string TerritoryDescription { get; set; }
+        public int RegionID { get; set; }
     
+        public virtual Region Region { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Employees> Employees { get; set; }
     }
 }

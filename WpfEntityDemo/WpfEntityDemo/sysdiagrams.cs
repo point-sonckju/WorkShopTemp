@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EntityDemoJSO1
+namespace WpfEntityDemo
 {
     using System;
     using System.Collections.Generic;
